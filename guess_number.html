@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Number Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        margin: 0;
+      }
+
+      .card {
+        width: min(92vw, 460px);
+        background: #fff;
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 0;
+        color: #0f172a;
+      }
+
+      p {
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      button {
+        border: 0;
+        background: #2563eb;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 999px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Mini Game: Đoán số</h1>
+      <p>
+        Bấm nút bên dưới để bắt đầu. Game sẽ dùng <strong>prompt()</strong> và
+        <strong>alert()</strong> để nhập số, trả lời cao hơn / thấp hơn và giới
+        hạn 7 lượt đoán.
+      </p>
+      <button id="startGameBtn">Bắt đầu chơi</button>
+    </div>
+
+    <script src="guess.js"></script>
+  </body>
+</html>
