@@ -39,7 +39,6 @@ console.log(calculate(10, "+", 5));
 console.log(calculate(10, "/", 0));
 console.log(calculate(10, "^", 5));
 console.log(calculate("abc", "+", 5));
-console.log(calculate(2, "**", 10));
 
 if (typeof module !== "undefined") {
   module.exports = { calculate };
