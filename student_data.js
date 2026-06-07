@@ -71,7 +71,7 @@ for (let i = 0; i < students.length; i++) {
     bottomStudent = { name: student.name, avg: avg };
   }
 
-  if (student.gender === "M" || student.gender === "F") {
+  if (student.gender === "FM" || student.gender === "MF") {
     genderStats[student.gender].total += avg;
     genderStats[student.gender].count += 1;
   }
