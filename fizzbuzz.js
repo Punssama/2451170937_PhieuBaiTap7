@@ -11,6 +11,7 @@ function classicFizzBuzz() {
     }
 
     console.log(output || i);
+    console.log(i);
   }
 }
 
