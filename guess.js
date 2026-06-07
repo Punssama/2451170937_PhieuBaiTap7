@@ -12,7 +12,7 @@ function startGame() {
 
   while (attempts < maxAttempts) {
     const input = prompt(
-      `Lần đoán ${attempts + 1}/${maxAttempts}. Nhập số từ 1-100:`,
+      `Lần đoán ${attempts + 1}/${maxAttempts}. Nhập số từ 1-100 `,
     );
 
     if (input === null) {
