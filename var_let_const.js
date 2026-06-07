@@ -62,7 +62,6 @@ console.log(null === undefined);
 console.log(NaN == NaN);
 console.log(0 == false);
 console.log(0 === false);
-console.log("" == false);
 
 console.log("\n=== A4: Truthy & Falsy ===");
 if ("0") console.log("A");
