@@ -3,7 +3,7 @@ function formatMoney(value) {
 }
 
 function formatK(value) {
-  return `${Math.round(value / 1000)}k`;
+  return `${Math.round(value / 1000)}.000`;
 }
 
 function calculateRestaurantBill(items, options = {}) {
