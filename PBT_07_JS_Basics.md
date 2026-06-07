@@ -1,4 +1,5 @@
 # 📋 PHIẾU BÀI TẬP 07
+
 # **JAVASCRIPT BASICS — Variables, Data Types, Control Structures**
 
 > **Tài liệu tham chiếu:** `tuan_4_javascript_basics/01_basics_introduction.md` → `04_control_structures.md`
@@ -35,8 +36,8 @@ console.log(arr);
 // Đoạn 5
 let a = 1;
 {
-    let a = 2;
-    console.log("Trong block:", a);
+  let a = 2;
+  console.log("Trong block:", a);
 }
 console.log("Ngoài block:", a);
 ```
@@ -48,16 +49,16 @@ Ghi dự đoán → Tạo file `var_let_const.js`, chạy → So sánh. Giải t
 Không chạy code, dự đoán kết quả:
 
 ```javascript
-console.log(typeof null);              // ???
-console.log(typeof undefined);         // ???
-console.log(typeof NaN);              // ???
-console.log("5" + 3);                 // ???
-console.log("5" - 3);                 // ???
-console.log("5" * "3");              // ???
-console.log(true + true);            // ???
-console.log([] + []);                // ???
-console.log([] + {});                // ???
-console.log({} + []);                // ???
+console.log(typeof null); // ???
+console.log(typeof undefined); // ???
+console.log(typeof NaN); // ???
+console.log("5" + 3); // ???
+console.log("5" - 3); // ???
+console.log("5" * "3"); // ???
+console.log(true + true); // ???
+console.log([] + []); // ???
+console.log([] + {}); // ???
+console.log({} + []); // ???
 ```
 
 Sau khi trả lời, chạy code kiểm tra. Giải thích **tại sao** `"5" + 3` và `"5" - 3` cho kết quả khác nhau.
@@ -67,14 +68,14 @@ Sau khi trả lời, chạy code kiểm tra. Giải thích **tại sao** `"5" + 
 Dự đoán `true` hay `false`:
 
 ```javascript
-console.log(5 == "5");                // ???
-console.log(5 === "5");               // ???
-console.log(null == undefined);       // ???
-console.log(null === undefined);      // ???
-console.log(NaN == NaN);             // ???
-console.log(0 == false);             // ???
-console.log(0 === false);            // ???
-console.log("" == false);            // ???
+console.log(5 == "5"); // ???
+console.log(5 === "5"); // ???
+console.log(null == undefined); // ???
+console.log(null === undefined); // ???
+console.log(NaN == NaN); // ???
+console.log(0 == false); // ???
+console.log(0 === false); // ???
+console.log("" == false); // ???
 ```
 
 **Quy tắc:** Từ giờ trở đi, bạn nên dùng `==` hay `===`? Tại sao?
@@ -84,14 +85,14 @@ console.log("" == false);            // ???
 Liệt kê TẤT CẢ giá trị Falsy trong JavaScript (đọc tài liệu). Sau đó dự đoán kết quả:
 
 ```javascript
-if ("0") console.log("A");           // In hay không?
-if ("") console.log("B");            // In hay không?
-if ([]) console.log("C");            // In hay không?
-if ({}) console.log("D");            // In hay không?
-if (null) console.log("E");          // In hay không?
-if (0) console.log("F");             // In hay không?
-if (-1) console.log("G");            // In hay không?
-if (" ") console.log("H");           // In hay không? (space)
+if ("0") console.log("A"); // In hay không?
+if ("") console.log("B"); // In hay không?
+if ([]) console.log("C"); // In hay không?
+if ({}) console.log("D"); // In hay không?
+if (null) console.log("E"); // In hay không?
+if (0) console.log("F"); // In hay không?
+if (-1) console.log("G"); // In hay không?
+if (" ") console.log("H"); // In hay không? (space)
 ```
 
 ### Câu A5 (5đ) — Template Literals
@@ -106,11 +107,18 @@ var greeting = "Xin chào " + name + "! Bạn " + age + " tuổi.";
 var url = "https://api.example.com/users/" + userId + "/orders?page=" + page;
 
 // Cách 3:
-var html = "<div class=\"card\">" +
-    "<h2>" + title + "</h2>" +
-    "<p>" + description + "</p>" +
-    "<span>Giá: " + price + "đ</span>" +
-    "</div>";
+var html =
+  '<div class="card">' +
+  "<h2>" +
+  title +
+  "</h2>" +
+  "<p>" +
+  description +
+  "</p>" +
+  "<span>Giá: " +
+  price +
+  "đ</span>" +
+  "</div>";
 ```
 
 ---
@@ -133,11 +141,11 @@ Tạo file `calculator.js`:
 // - Input không phải số → thông báo lỗi
 
 // Test:
-console.log(calculate(10, "+", 5));    // → 15
-console.log(calculate(10, "/", 0));    // → "Lỗi: Không thể chia cho 0"
-console.log(calculate(10, "^", 5));    // → "Lỗi: Operator '^' không hợp lệ"
+console.log(calculate(10, "+", 5)); // → 15
+console.log(calculate(10, "/", 0)); // → "Lỗi: Không thể chia cho 0"
+console.log(calculate(10, "^", 5)); // → "Lỗi: Operator '^' không hợp lệ"
 console.log(calculate("abc", "+", 5)); // → "Lỗi: Input không phải số"
-console.log(calculate(2, "**", 10));   // → 1024
+console.log(calculate(2, "**", 10)); // → 1024
 ```
 
 ### Bài B2 (15đ) — Xử lý dữ liệu sinh viên
@@ -148,14 +156,14 @@ Cho mảng dữ liệu:
 
 ```javascript
 const students = [
-    { name: "An", math: 8, physics: 7, cs: 9, gender: "M" },
-    { name: "Bình", math: 6, physics: 9, cs: 7, gender: "F" },
-    { name: "Chi", math: 9, physics: 6, cs: 8, gender: "F" },
-    { name: "Dũng", math: 5, physics: 5, cs: 6, gender: "M" },
-    { name: "Em", math: 10, physics: 8, cs: 9, gender: "F" },
-    { name: "Phong", math: 3, physics: 4, cs: 5, gender: "M" },
-    { name: "Giang", math: 7, physics: 7, cs: 7, gender: "F" },
-    { name: "Huy", math: 4, physics: 6, cs: 3, gender: "M" },
+  { name: "An", math: 8, physics: 7, cs: 9, gender: "M" },
+  { name: "Bình", math: 6, physics: 9, cs: 7, gender: "F" },
+  { name: "Chi", math: 9, physics: 6, cs: 8, gender: "F" },
+  { name: "Dũng", math: 5, physics: 5, cs: 6, gender: "M" },
+  { name: "Em", math: 10, physics: 8, cs: 9, gender: "F" },
+  { name: "Phong", math: 3, physics: 4, cs: 5, gender: "M" },
+  { name: "Giang", math: 7, physics: 7, cs: 7, gender: "F" },
+  { name: "Huy", math: 4, physics: 6, cs: 3, gender: "M" },
 ];
 ```
 
@@ -189,6 +197,7 @@ Viết game đoán số **chạy trên browser** (dùng `prompt()` và `alert()`
 5. **Giới hạn 7 lần đoán** — Hết lượt → thua, hiển thị đáp án
 
 **Yêu cầu thêm:**
+
 - Validate input: Chỉ chấp nhận số 1-100
 - Nếu user nhập cùng số 2 lần → cảnh báo "Bạn đã đoán số này rồi!"
 
@@ -200,19 +209,19 @@ Classic FizzBuzz + biến thể:
 
 ```javascript
 // Version 1: Classic
-// In 1-100. Chia hết 3 → "Fizz", chia hết 5 → "Buzz", 
+// In 1-100. Chia hết 3 → "Fizz", chia hết 5 → "Buzz",
 // chia hết cả 2 → "FizzBuzz"
 
 // Version 2: Custom
-// Viết hàm customFizzBuzz(n, rules) 
+// Viết hàm customFizzBuzz(n, rules)
 // rules = mảng [{ divisor: 3, word: "Fizz" }, { divisor: 5, word: "Buzz" }, ...]
 // Hàm phải hoạt động với BẤT KỲ bộ rules nào
 
 // Test:
 customFizzBuzz(30, [
-    { divisor: 3, word: "Fizz" },
-    { divisor: 5, word: "Buzz" },
-    { divisor: 7, word: "Jazz" }
+  { divisor: 3, word: "Fizz" },
+  { divisor: 5, word: "Buzz" },
+  { divisor: 7, word: "Jazz" },
 ]);
 // → 21 = "FizzJazz", 15 = "FizzBuzz", 35 = "BuzzJazz", 105 = "FizzBuzzJazz"
 ```
@@ -227,31 +236,31 @@ Tìm và sửa TẤT CẢ lỗi trong code sau (có ít nhất 6 lỗi):
 
 ```javascript
 function tinhGiaGiamGia(giaBan, phanTramGiam) {
-    if (phanTramGiam < 0 || phanTramGiam > 100) {
-        return "Phần trăm giảm không hợp lệ"
-    }
-    
-    var giamGia = giaBan * phanTramGiam / 100
-    let giaSauGiam = giaBan - giamGia
-    
-    if (giaSauGiam = 0) {
-        console.log("Sản phẩm miễn phí!")
-    }
-    
-    return giaSauGiam
+  if (phanTramGiam < 0 || phanTramGiam > 100) {
+    return "Phần trăm giảm không hợp lệ";
+  }
+
+  var giamGia = (giaBan * phanTramGiam) / 100;
+  let giaSauGiam = giaBan - giamGia;
+
+  if ((giaSauGiam = 0)) {
+    console.log("Sản phẩm miễn phí!");
+  }
+
+  return giaSauGiam;
 }
 
 // Test
-const gia = tinhGiaGiamGia("100000", 20)
-console.log("Giá sau giảm: " + gia + "đ")
+const gia = tinhGiaGiamGia("100000", 20);
+console.log("Giá sau giảm: " + gia + "đ");
 
-const gia2 = tinhGiaGiamGia(50000, 110)
-console.log("Giá: " + gia2)
+const gia2 = tinhGiaGiamGia(50000, 110);
+console.log("Giá: " + gia2);
 
 for (var i = 0; i < 5; i++) {
-    setTimeout(function() {
-        console.log("Item " + i)
-    }, 1000)
+  setTimeout(function () {
+    console.log("Item " + i);
+  }, 1000);
 }
 ```
 
@@ -265,7 +274,7 @@ Viết chương trình tính hóa đơn nhà hàng:
 Input: Danh sách món ăn + giá + số lượng
 Quy tắc:
 - Tổng > 500k → giảm 10%
-- Tổng > 1 triệu → giảm 15%  
+- Tổng > 1 triệu → giảm 15%
 - Ngày thứ 3 (Wednesday) → giảm thêm 5%
 - VAT 8%
 - Tip 5% (optional)
@@ -315,6 +324,7 @@ Output: Hóa đơn chi tiết dạng:
 7. 🎤 Viết hàm `calculate(a, op, b)` trong file .js → chạy bằng Node.js → show kết quả
 
 **Checklist video:**
+
 - [ ] Đầu video: Giới thiệu tên + MSSV + lớp
 - [ ] Webcam mặt SV ở góc phải dưới
 - [ ] Gõ trực tiếp trong Console + file .js
