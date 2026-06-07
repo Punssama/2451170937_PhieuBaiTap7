@@ -21,7 +21,6 @@
 5. Block scope:
    - In trong block: `2`
    - In ngoài block: `1`
-   - Vì `let` có phạm vi theo block.
 
 **File kiểm chứng:** [var_let_const.js](var_let_const.js)
 
